@@ -191,3 +191,160 @@ h1 .brand-term{font-size:.85em}
 #slide-10 .close-items .scan-points{display:grid;gap:6px;margin:0;padding-left:1.05em;font-size:24px;line-height:1.18;min-width:0}
 #slide-10 .loop-media{position:absolute;right:0;bottom:0;width:580px;height:538px;z-index:1}
 #slide-10 footer{z-index:2}
+
+
+/* ===== Frameworks visuais · slide 5 (CRM simples vs avançado) e slide 11 (AIOS de Marketing) =====
+   Estado base = estado final (impressão, PDF, movimento reduzido e verificador).
+   As animações só correm com .slide.active, por isso reiniciam sempre que o slide abre. */
+:root{--yellow-300:#FDE68A;--yellow-700:#B88A00;--cyan-300:#A8DEE0}
+
+#slide-crm-framework .heading,#slide-aios-framework .heading{height:240px}
+#slide-crm-framework h1,#slide-aios-framework h1{height:122px;margin:12px 0 0}
+#slide-crm-framework .content,#slide-aios-framework .content{display:block;position:relative;flex:none;height:560px;padding-top:0;min-height:0;animation:none!important;transform:none!important}
+
+/* ---------- Slide 5 · CRM ---------- */
+#slide-crm-framework .crm-step{position:absolute;top:0;height:40px;display:flex;align-items:center;gap:12px;white-space:nowrap}
+#slide-crm-framework .crm-step b{width:40px;height:40px;border-radius:50%;background:var(--g900);color:var(--cream-100);font:400 26px/1 var(--display);display:flex;align-items:center;justify-content:center;flex:none}
+#slide-crm-framework .crm-step span{font:500 24px/1 var(--label);letter-spacing:.08em;text-transform:uppercase;color:var(--g900)}
+#slide-crm-framework .crm-step.s1{left:114px}#slide-crm-framework .crm-step.s2{left:418px}#slide-crm-framework .crm-step.s3{left:722px}#slide-crm-framework .crm-step.s4{left:1026px}#slide-crm-framework .crm-step.s5{left:1330px}
+
+#slide-crm-framework .crm-lane{position:absolute;left:0;width:1620px;border:2px solid;border-radius:28px;overflow:hidden}
+#slide-crm-framework .crm-lane-s{top:52px;height:196px;background:var(--yellow-100);border-color:var(--yellow-500)}
+#slide-crm-framework .crm-lane-a{top:280px;height:190px;border-color:var(--cyan-500);background-color:var(--cyan-100);background-image:radial-gradient(rgba(27,27,27,.09) 1.2px,transparent 1.4px);background-size:16px 16px}
+#slide-crm-framework .crm-tab{position:absolute;left:0;top:0;bottom:0;width:84px;display:flex;align-items:center;justify-content:center}
+#slide-crm-framework .crm-lane-s .crm-tab{background:var(--yellow-500)}
+#slide-crm-framework .crm-lane-a .crm-tab{background:var(--cyan-500)}
+#slide-crm-framework .crm-tab span{transform:rotate(-90deg);white-space:nowrap;font:500 24px/1.1 var(--label);letter-spacing:.1em;text-transform:uppercase;text-align:center;color:var(--g900)}
+
+#slide-crm-framework .crm-rail{position:absolute;left:100px;top:102px;width:1500px;height:4px;transform-origin:0 50%;background:var(--yellow-700)}
+#slide-crm-framework .crm-lane-a .crm-rail{background:var(--cyan-700)}
+#slide-crm-framework .crm-arrow{position:absolute;top:97px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:10px solid var(--yellow-700)}
+#slide-crm-framework .crm-lane-a .crm-arrow{border-left-color:var(--cyan-700)}
+#slide-crm-framework .crm-arrow.a1{left:398px}#slide-crm-framework .crm-arrow.a2{left:702px}#slide-crm-framework .crm-arrow.a3{left:1006px}#slide-crm-framework .crm-arrow.a4{left:1310px}
+#slide-crm-framework .crm-packet{position:absolute;left:243px;top:95px;width:18px;height:18px;border-radius:50%;background:var(--yellow-500);border:2px solid var(--g900);opacity:0;z-index:1}
+
+#slide-crm-framework .crm-node{position:absolute;top:24px;width:276px;height:160px;padding:30px 18px 10px;border:2px solid var(--g900);border-radius:16px;z-index:2;background:var(--yellow-300);box-shadow:3px 3px 0 var(--yellow-700)}
+#slide-crm-framework .crm-lane-a .crm-node{background:var(--cyan-300);box-shadow:3px 3px 0 var(--cyan-700)}
+#slide-crm-framework .crm-node.hub{background:var(--yellow-500)}
+#slide-crm-framework .crm-node.c1{left:114px}#slide-crm-framework .crm-node.c2{left:418px}#slide-crm-framework .crm-node.c3{left:722px}#slide-crm-framework .crm-node.c4{left:1026px}#slide-crm-framework .crm-node.c5{left:1330px}
+#slide-crm-framework .crm-node h3{font:400 34px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;margin:0 0 8px;color:var(--g900)}
+#slide-crm-framework .crm-node p{font:400 21px/1.18 var(--text);color:var(--g900);margin:0}
+#slide-crm-framework .crm-pill{position:absolute;top:-20px;left:14px;height:36px;display:flex;align-items:center;gap:8px;padding:0 12px;background:var(--paper);border:2px solid var(--g900);border-radius:999px}
+#slide-crm-framework .crm-pill img{display:block;height:22px;width:auto}
+
+#slide-crm-framework .crm-link{position:absolute;top:236px;height:68px;width:0;border-left:2px dashed var(--cyan-700);z-index:3}
+#slide-crm-framework .crm-plus{position:absolute;top:253px;width:34px;height:34px;margin-left:-17px;border-radius:50%;background:var(--cyan-500);border:2px solid var(--g900);display:flex;align-items:center;justify-content:center;font:400 30px/1 var(--display);color:var(--g900);z-index:4}
+#slide-crm-framework .k1{left:252px}#slide-crm-framework .k2{left:556px}#slide-crm-framework .k3{left:860px}#slide-crm-framework .k4{left:1164px}#slide-crm-framework .k5{left:1468px}
+#slide-crm-framework .crm-tick{position:absolute;top:466px;height:18px;width:0;border-left:2px dashed var(--cyan-700);z-index:1}
+
+#slide-crm-framework .crm-band{position:absolute;left:0;top:484px;width:1620px;height:64px;display:flex;align-items:center;gap:24px;padding:0 28px;background:var(--cyan-500);border:2px solid var(--cyan-700);border-radius:16px;z-index:2}
+#slide-crm-framework .crm-band-label{flex:none;font:500 24px/1 var(--label);letter-spacing:.1em;text-transform:uppercase;color:var(--g900)}
+#slide-crm-framework .crm-band p{flex:1;margin:0;font:400 24px/1.2 var(--text);color:var(--g900)}
+#slide-crm-framework .crm-chevs{flex:none;display:flex;gap:6px}
+#slide-crm-framework .crm-chevs i{display:block;width:12px;height:12px;border-top:4px solid var(--g900);border-left:4px solid var(--g900);transform:rotate(-45deg)}
+
+/* CRM · movimento (só com a apresentação ativa) */
+#slide-crm-framework.active .crm-step{animation:crm-rise .45s var(--ease) backwards}
+#slide-crm-framework.active .crm-step.s2{animation-delay:.06s}#slide-crm-framework.active .crm-step.s3{animation-delay:.12s}#slide-crm-framework.active .crm-step.s4{animation-delay:.18s}#slide-crm-framework.active .crm-step.s5{animation-delay:.24s}
+#slide-crm-framework.active .crm-lane-s{animation:crm-wipe .6s var(--ease) .5s backwards}
+#slide-crm-framework.active .crm-lane-a{animation:crm-wipe .6s var(--ease) 2.5s backwards}
+#slide-crm-framework.active .crm-lane-s .crm-rail{animation:crm-draw .7s var(--ease) 1s backwards}
+#slide-crm-framework.active .crm-lane-a .crm-rail{animation:crm-draw .7s var(--ease) 3.1s backwards}
+#slide-crm-framework.active .crm-arrow{animation:crm-stamp .35s var(--ease) 1.2s backwards}
+#slide-crm-framework.active .crm-lane-a .crm-arrow{animation-delay:3.2s}
+#slide-crm-framework.active .crm-lane-s .crm-node.c1{animation:crm-stamp .45s var(--ease) .85s backwards,crm-pulse 6s linear 2s infinite}
+#slide-crm-framework.active .crm-lane-s .crm-node.c2{animation:crm-stamp .45s var(--ease) 1.05s backwards,crm-pulse 6s linear 3.2s infinite}
+#slide-crm-framework.active .crm-lane-s .crm-node.c3{animation:crm-stamp .45s var(--ease) 1.25s backwards,crm-pulse 6s linear 4.4s infinite}
+#slide-crm-framework.active .crm-lane-s .crm-node.c4{animation:crm-stamp .45s var(--ease) 1.45s backwards,crm-pulse 6s linear 5.6s infinite}
+#slide-crm-framework.active .crm-lane-s .crm-node.c5{animation:crm-stamp .45s var(--ease) 1.65s backwards,crm-pulse 6s linear 6.8s infinite}
+#slide-crm-framework.active .crm-packet{animation:crm-packet 6s linear 2s infinite}
+#slide-crm-framework.active .crm-lane-a .crm-node.c1{animation:crm-rise .5s var(--ease) 2.9s backwards}
+#slide-crm-framework.active .crm-lane-a .crm-node.c2{animation:crm-rise .5s var(--ease) 3.05s backwards}
+#slide-crm-framework.active .crm-lane-a .crm-node.c3{animation:crm-rise .5s var(--ease) 3.2s backwards}
+#slide-crm-framework.active .crm-lane-a .crm-node.c4{animation:crm-rise .5s var(--ease) 3.35s backwards}
+#slide-crm-framework.active .crm-lane-a .crm-node.c5{animation:crm-rise .5s var(--ease) 3.5s backwards}
+#slide-crm-framework.active .crm-link.k1{animation:crm-grow .4s var(--ease) 2.3s backwards}
+#slide-crm-framework.active .crm-link.k2{animation:crm-grow .4s var(--ease) 2.4s backwards}
+#slide-crm-framework.active .crm-link.k3{animation:crm-grow .4s var(--ease) 2.5s backwards}
+#slide-crm-framework.active .crm-link.k4{animation:crm-grow .4s var(--ease) 2.6s backwards}
+#slide-crm-framework.active .crm-link.k5{animation:crm-grow .4s var(--ease) 2.7s backwards}
+#slide-crm-framework.active .crm-plus.k1{animation:crm-stamp .35s var(--ease) 2.4s backwards}
+#slide-crm-framework.active .crm-plus.k2{animation:crm-stamp .35s var(--ease) 2.5s backwards}
+#slide-crm-framework.active .crm-plus.k3{animation:crm-stamp .35s var(--ease) 2.6s backwards}
+#slide-crm-framework.active .crm-plus.k4{animation:crm-stamp .35s var(--ease) 2.7s backwards}
+#slide-crm-framework.active .crm-plus.k5{animation:crm-stamp .35s var(--ease) 2.8s backwards}
+#slide-crm-framework.active .crm-band{animation:crm-wipe .6s var(--ease) 3.6s backwards}
+#slide-crm-framework.active .crm-tick{animation:crm-grow .4s var(--ease) 3.8s backwards}
+#slide-crm-framework.active .crm-chevs i{animation:crm-chev 1.6s linear infinite}
+#slide-crm-framework.active .crm-chevs i:nth-child(2){animation-delay:.25s}
+#slide-crm-framework.active .crm-chevs i:nth-child(3){animation-delay:.5s}
+
+/* ---------- Slide 11 · AIOS ---------- */
+#slide-aios-framework .aios-atom{position:absolute;left:530px;top:0;width:560px;height:560px;overflow:visible}
+#slide-aios-framework .aios-atom .a-core-label{font:500 18px/1 var(--label);letter-spacing:.12em;fill:var(--g900)}
+#slide-aios-framework .aios-atom .a-core,#slide-aios-framework .aios-atom .a-ring,#slide-aios-framework .aios-atom .a-orb,#slide-aios-framework .aios-atom .a-loop,#slide-aios-framework .aios-atom .a-wave{transform-box:view-box;transform-origin:280px 280px}
+#slide-aios-framework .aios-atom .a-wave{opacity:0}
+
+#slide-aios-framework .aios-seal{position:absolute;transform:translate(-50%,-50%);padding:5px 14px;background:var(--paper);border:2px solid var(--g900);border-radius:999px;font:500 20px/1 var(--label);letter-spacing:.06em;color:var(--g900);white-space:nowrap;z-index:3}
+#slide-aios-framework .sl1{left:656px;top:126px}#slide-aios-framework .sl2{left:739px;top:351px}#slide-aios-framework .sl4{left:912px;top:178px}#slide-aios-framework .sl5{left:987px;top:344px}#slide-aios-framework .slr{left:1012px;top:421px}
+
+#slide-aios-framework .aios-block{position:absolute;width:474px;height:176px;padding:14px 24px 12px;background:var(--paper);border:2px solid var(--cream-300);border-top-width:8px;border-radius:28px;z-index:2}
+#slide-aios-framework .aios-block h3{font:400 36px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;margin:0 0 8px;color:var(--g900)}
+#slide-aios-framework .aios-block ul{list-style:none;margin:0;padding:0}
+#slide-aios-framework .aios-block li{display:flex;align-items:center;gap:12px;font:400 21px/1.2 var(--text);color:var(--g900);margin:0 0 5px}
+#slide-aios-framework .aios-block li:last-child{margin-bottom:0}
+#slide-aios-framework .aios-block li::before{content:"";flex:none;width:14px;height:14px}
+#slide-aios-framework .m-fn::before{background:var(--cyan-500);border:2px solid var(--g900)}
+#slide-aios-framework .m-tec::before{border:2px solid var(--g900);border-radius:50%;background:var(--paper)}
+#slide-aios-framework .m-bp::before{background:var(--yellow-500);clip-path:polygon(50% 0,100% 100%,0 100%)}
+#slide-aios-framework .m-met::before{border:2px dashed var(--g900);border-radius:50%}
+#slide-aios-framework .b-gov{left:0;top:0;border-top-color:var(--yellow-500)}
+#slide-aios-framework .b-ctx{left:0;top:192px;border-top-color:var(--cyan-300)}
+#slide-aios-framework .b-how{left:0;top:384px;border-top-color:var(--cream-300)}
+#slide-aios-framework .b-skl{left:1146px;top:0;border-top-color:var(--cyan-500)}
+#slide-aios-framework .b-con{left:1146px;top:192px;border-top-color:var(--cyan-700)}
+#slide-aios-framework .b-mel{left:1146px;top:384px;border-top-color:var(--cyan-900)}
+#slide-aios-framework .b-how ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+#slide-aios-framework .b-how li{margin:0}
+
+/* AIOS · movimento (só com a apresentação ativa) */
+#slide-aios-framework.active .a-core{animation:aios-in .6s var(--ease) .2s backwards}
+#slide-aios-framework.active .a-r-gov{animation:aios-ring .6s var(--ease) .5s backwards}
+#slide-aios-framework.active .a-r-ctx{animation:aios-ring .6s var(--ease) 1.3s backwards}
+#slide-aios-framework.active .a-r-skl{animation:aios-ring .6s var(--ease) 2.1s backwards}
+#slide-aios-framework.active .a-r-con{animation:aios-ring .6s var(--ease) 2.9s backwards}
+#slide-aios-framework.active .a-r-loop{animation:aios-ring .6s var(--ease) 3.7s backwards}
+#slide-aios-framework.active .a-wave{animation:aios-wave 1.2s ease-out 4.6s both}
+#slide-aios-framework.active .a-orb.o1{animation:aios-spin 16s linear infinite,aios-fade .5s ease 1.3s backwards}
+#slide-aios-framework.active .a-orb.o2{animation:aios-spin 24s linear infinite reverse,aios-fade .5s ease 2.1s backwards}
+#slide-aios-framework.active .a-orb.o3{animation:aios-spin 34s linear infinite,aios-fade .5s ease 2.9s backwards}
+#slide-aios-framework.active .a-loop{animation:aios-spin 20s linear infinite reverse}
+#slide-aios-framework.active .sl1{animation:aios-stamp .4s var(--ease) .6s backwards}
+#slide-aios-framework.active .sl2{animation:aios-stamp .4s var(--ease) 1.4s backwards}
+#slide-aios-framework.active .sl4{animation:aios-stamp .4s var(--ease) 2.2s backwards}
+#slide-aios-framework.active .sl5{animation:aios-stamp .4s var(--ease) 3s backwards}
+#slide-aios-framework.active .slr{animation:aios-stamp .4s var(--ease) 3.8s backwards}
+#slide-aios-framework.active .b-gov{animation:aios-in-l .5s var(--ease) .5s backwards}
+#slide-aios-framework.active .b-ctx{animation:aios-in-l .5s var(--ease) 1.3s backwards}
+#slide-aios-framework.active .b-skl{animation:aios-in-r .5s var(--ease) 2.1s backwards}
+#slide-aios-framework.active .b-con{animation:aios-in-r .5s var(--ease) 2.9s backwards}
+#slide-aios-framework.active .b-mel{animation:aios-in-r .5s var(--ease) 3.7s backwards}
+#slide-aios-framework.active .b-how{animation:aios-fade .5s ease 4.1s backwards}
+
+/* ---------- Keyframes ---------- */
+@keyframes crm-rise{from{opacity:0;transform:translateY(26px)}}
+@keyframes crm-stamp{from{opacity:0;transform:scale(.82)}}
+@keyframes crm-draw{from{transform:scaleX(0)}}
+@keyframes crm-grow{from{transform:scaleY(0)}}
+@keyframes crm-wipe{from{clip-path:inset(0 100% 0 0)}}
+@keyframes crm-pulse{0%{box-shadow:3px 3px 0 var(--yellow-700),0 0 0 0 rgba(252,202,41,0)}7%{box-shadow:3px 3px 0 var(--yellow-700),0 0 0 9px rgba(252,202,41,.5)}16%,100%{box-shadow:3px 3px 0 var(--yellow-700),0 0 0 0 rgba(252,202,41,0)}}
+@keyframes crm-packet{0%{opacity:0;transform:translateX(0)}4%{opacity:1}80%{opacity:1;transform:translateX(1216px)}88%,100%{opacity:0;transform:translateX(1216px)}}
+@keyframes crm-chev{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes aios-in{from{opacity:0;transform:scale(.5)}}
+@keyframes aios-ring{from{opacity:0;transform:scale(.6)}}
+@keyframes aios-in-l{from{opacity:0;transform:translateX(-36px)}}
+@keyframes aios-in-r{from{opacity:0;transform:translateX(36px)}}
+@keyframes aios-fade{from{opacity:0}}
+@keyframes aios-stamp{from{opacity:0;transform:translate(-50%,-50%) scale(.6)}}
+@keyframes aios-wave{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.6)}}
+@keyframes aios-spin{to{transform:rotate(360deg)}}

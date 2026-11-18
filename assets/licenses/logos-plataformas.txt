@@ -1,0 +1,8 @@
+Logos das plataformas usados nos frameworks visuais (slides 5 e 11)
+Versão: 18/11/2026. Usados apenas para identificar ferramentas e canais citados na proposta; sem endosso ou parceria implícitos.
+
+- LinkedIn (linkedin.png): marca "in" oficial, ficheiro de download de https://www.brand.linkedin.com/in-logo. Cores e forma não alterados. Sujeito às regras de marca da LinkedIn.
+- Apify (apify.svg): símbolo oficial da Apify, https://apify.com/img/apify-logo/apify-symbol-200x200.svg (página de marca: https://www.apify.com/resources/brand). Sem alterações.
+- Unipile (unipile.svg): logotipo publicado em https://unipile.com/wp-content/uploads/2024/07/logo-unipile.svg. Não foi encontrado kit de marca oficial; confirmar a versão atual com a Unipile antes de publicação formal. Fundo transparente original preservado; o texto da palavra "unipile" foi recolorido para grafite #1B1B1B para leitura sobre fundo claro.
+- Gmail (gmail.svg): logo de produto do Google, https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg.
+- Google Maps (google-maps.svg), Instagram (instagram.svg), WhatsApp (whatsapp.svg), Claude (claude.svg): Simple Icons 16.38.0, licença CC0 1.0 (https://github.com/simple-icons/simple-icons). Cores definidas pelo campo "hex" do mesmo repositório. Instagram e WhatsApp: marcas da Meta (https://about.meta.com/brand/resources). Claude: marca da Anthropic (https://claude.ai); o mesmo caminho SVG é usado em atomica.marketing/androi.
