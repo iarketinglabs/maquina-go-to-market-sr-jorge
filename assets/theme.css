@@ -82,7 +82,7 @@ h1 .brand-term{font-size:.85em}
 #slide-05 .implementation-timeline{position:absolute;left:150px;top:412px;bottom:130px;width:1060px;display:grid;grid-template-columns:1fr 1fr 2fr;min-height:0}
 #slide-05 .phase{min-width:0;padding:26px 22px;background:var(--paper);border-top:10px solid var(--cyan-500);border-right:1px solid var(--cream-300)}
 #slide-05 .phase-mvp{background:var(--cyan-100);border-top-color:var(--cyan-700)}
-#slide-05 .phase-validation{background:var(--yellow-100);border-top-color:var(--yellow-500);border-right:0}
+#slide-05 .phase-tests{background:var(--yellow-100);border-top-color:var(--yellow-500);border-right:0}
 #slide-05 .phase-percent{display:block;font:400 76px/.9 var(--display);margin-bottom:8px}
 #slide-05 .phase h3{font-size:40px;line-height:1;margin:0 0 14px}
 #slide-05 .phase p{font-size:24px;line-height:1.25;min-height:76px}
@@ -169,3 +169,17 @@ h1 .brand-term{font-size:.85em}
 #slide-10 .close-items>.card{grid-template-columns:200px 1fr;gap:20px;padding:14px 22px}
 #slide-10 .close-items h3{font-size:40px}
 #slide-10 .close-items p{font-size:26px;line-height:1.22}
+
+
+/* Revisão de conteúdo: operação mensal, governança e investimento da formação. */
+#slide-07 .service-grid .card{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+#slide-07 .service-grid .card:first-child{background:var(--pulp);border-top:10px solid var(--cyan-500)}
+#slide-07 .service-grid .card:nth-child(2){background:var(--paper);border-top:10px solid var(--cyan-700)}
+#slide-07 .service-grid .card:nth-child(3){background:var(--cyan-100);border-top:10px solid var(--cyan-500)}
+#slide-07 .service-grid h3{font-size:44px;line-height:1.04;min-height:88px;margin:0 0 14px}
+#slide-07 .service-points{display:grid;gap:12px;margin:0;padding-left:1.05em;font-size:25px;line-height:1.24}
+#slide-07 .service-points li::marker{color:var(--cyan-700)}
+#slide-08 .content.architecture .card{align-items:flex-start}
+#slide-08 .architecture h3{align-self:flex-start}
+#slide-08 .architecture p{margin:0}
+#slide-10 .price-highlight{display:inline-block;white-space:nowrap;padding:0 .1em .02em;background:var(--solar);border-radius:.06em;line-height:.88}
