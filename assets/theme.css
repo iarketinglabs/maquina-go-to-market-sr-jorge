@@ -183,3 +183,11 @@ h1 .brand-term{font-size:.85em}
 #slide-08 .architecture h3{align-self:flex-start}
 #slide-08 .architecture p{margin:0}
 #slide-10 .price-highlight{display:inline-block;white-space:nowrap;padding:0 .1em .02em;background:var(--solar);border-radius:.06em;line-height:.88}
+
+
+/* Bullets compactos para leitura rápida nos slides 8 e 10. */
+#slide-08 .scan-points{flex:1;display:grid;gap:4px;margin:0;padding-left:1.05em;font-size:22px;line-height:1.18;min-width:0}
+#slide-08 .scan-points li::marker,#slide-10 .scan-points li::marker{color:var(--cyan-700)}
+#slide-10 .close-items .scan-points{display:grid;gap:6px;margin:0;padding-left:1.05em;font-size:24px;line-height:1.18;min-width:0}
+#slide-10 .loop-media{position:absolute;right:0;bottom:0;width:580px;height:538px;z-index:1}
+#slide-10 footer{z-index:2}
